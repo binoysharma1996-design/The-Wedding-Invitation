@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#702c32" />
+  <title>Mayank & Ananya — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --wine:#702c32; --wine-dark:#3e151b; --marigold:#d89c2b; --cream:#fff9ec; --blush:#f5e1d3; --leaf:#556342; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--wine-dark); background:var(--cream); font-family:Montserrat, sans-serif; }
+    .hero { min-height:100vh; display:grid; place-items:center; overflow:hidden; position:relative; padding:58px 22px; background:radial-gradient(circle at 50% 18%, #fffdf7 0 15%, transparent 38%), linear-gradient(145deg, #f6e6d6, #fffaf0 48%, #f0d6c4); }
+    .arch { width:min(670px, 100%); min-height:730px; position:relative; text-align:center; padding:76px 34px 54px; border:1px solid rgba(112,44,50,.35); border-radius:340px 340px 20px 20px; background:rgba(255,253,247,.62); box-shadow:0 22px 60px rgba(91,39,42,.13); }
+    .arch:before, .arch:after { content:"✦"; position:absolute; color:var(--marigold); font-size:28px; }
+    .arch:before { top:28px; left:52px; } .arch:after { top:28px; right:52px; }
+    .eyebrow { color:var(--leaf); font-size:.71rem; font-weight:600; letter-spacing:.28em; text-transform:uppercase; margin:0 0 30px; }
+    .invites { font-family:"Cormorant Garamond", serif; font-style:italic; font-size:1.45rem; margin:0 0 15px; }
+    h1 { font:normal 5.8rem/0.8 "Great Vibes", cursive; color:var(--wine); margin:0; text-shadow:0 2px 0 white; }
+    .amp { font:italic 2.2rem/1 "Cormorant Garamond", serif; display:block; margin:12px 0 8px; color:var(--marigold); }
+    .together { font:600 .73rem/1.65 Montserrat,sans-serif; letter-spacing:.2em; text-transform:uppercase; margin:25px auto 35px; max-width:330px; }
+    .divider { display:flex; align-items:center; gap:13px; justify-content:center; color:var(--marigold); margin:20px 0; }
+    .divider:before,.divider:after { content:""; height:1px; width:78px; background:linear-gradient(90deg, transparent,var(--marigold)); } .divider:after { transform:scaleX(-1); }
+    .date { font:600 1.25rem "Cormorant Garamond",serif; letter-spacing:.14em; text-transform:uppercase; margin:0; }
+    .date strong { display:block; font-size:3.1rem; letter-spacing:.02em; line-height:1.05; }
+    .date small { display:block; margin-top:8px; font:500 .68rem Montserrat,sans-serif; letter-spacing:.19em; }
+    .city { margin-top:35px; color:var(--leaf); font:600 .75rem Montserrat,sans-serif; letter-spacing:.25em; text-transform:uppercase; }
+    .lotus { font-size:2.2rem; color:var(--marigold); margin-top:18px; }
+    .ornament { position:absolute; font:normal 6rem/1 "Cormorant Garamond", serif; color:rgba(85,99,66,.18); } .o1{left:-22px;bottom:56px;transform:rotate(-30deg)} .o2{right:-19px;bottom:130px;transform:rotate(35deg)}
+    .details { background:var(--wine); color:var(--cream); padding:86px 24px 96px; text-align:center; }
+    .section-kicker { color:#e9bd68; font-size:.69rem; letter-spacing:.28em; text-transform:uppercase; font-weight:600; }
+    h2 { font:normal 3.3rem/1 "Cormorant Garamond",serif; margin:13px 0 48px; }
+    .events { display:grid; grid-template-columns:repeat(2,minmax(0,310px)); justify-content:center; gap:22px; }
+    .event { border:1px solid rgba(242,204,126,.55); min-height:255px; padding:36px 25px; display:flex; flex-direction:column; justify-content:center; background:rgba(255,255,255,.035); }
+    .event .symbol { color:#efbe61; font-size:1.8rem; } .event h3 { font:normal 2rem "Cormorant Garamond",serif; margin:13px 0 5px; } .event p { font-size:.78rem; letter-spacing:.09em; line-height:1.8; margin:0; }
+    .closing { padding:78px 22px; text-align:center; background:linear-gradient(#fff9ec,#f6e4d2); } .closing p { font:italic 1.5rem "Cormorant Garamond",serif; margin:0 auto 14px; } .closing h2 { color:var(--wine); margin:0; }
+    @media (max-width:540px) { .arch { min-height:660px; padding:72px 20px 38px; } h1 { font-size:4.5rem; } .events { grid-template-columns:1fr; max-width:330px; margin:auto; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="arch">
+        <span class="ornament o1">❧</span><span class="ornament o2">❧</span>
+        <p class="eyebrow">With joyful hearts</p>
+        <p class="invites">Together with their families, invite you to celebrate</p>
+        <h1>Mayank <span class="amp">&amp;</span> Ananya</h1>
+        <p class="together">as they begin their beautiful journey together</p>
+        <div class="divider">✦</div>
+        <p class="date">Saturday <strong>12 December</strong><small>Two thousand twenty-six · From evening onwards</small></p>
+        <p class="city">Mathura, Uttar Pradesh</p>
+        <div class="lotus">❋</div>
+      </div>
+    </section>
+    <section class="details">
+      <p class="section-kicker">Save the dates</p>
+      <h2>Celebrations</h2>
+      <div class="events">
+        <article class="event"><div class="symbol">☀</div><h3>Haldi</h3><p>Friday · 11 December 2026<br>Evening</p></article>
+        <article class="event"><div class="symbol">✦</div><h3>Wedding</h3><p>Saturday · 12 December 2026<br>From evening onwards · Mathura</p></article>
+      </div>
+    </section>
+    <section class="closing"><p>Your presence will make our celebration complete.</p><h2>Mayank &amp; Ananya</h2></section>
+  </main>
+</body>
+</html>

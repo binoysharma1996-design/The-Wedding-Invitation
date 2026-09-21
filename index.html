@@ -1,69 +1,535 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#702c32" />
-  <title>Mayank Tiwari & Ananya — Wedding Invitation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mayank and Ananya — Save the Date</title>
+  
+  <!-- Google Fonts: Playfair Display & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
   <style>
-    :root { --wine:#702c32; --wine-dark:#3e151b; --marigold:#d89c2b; --cream:#fff9ec; --blush:#f5e1d3; --leaf:#556342; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--wine-dark); background:var(--cream); font-family:Montserrat, sans-serif; }
-    .hero { min-height:100vh; display:grid; place-items:center; overflow:hidden; position:relative; padding:58px 22px; background:radial-gradient(circle at 50% 18%, #fffdf7 0 15%, transparent 38%), linear-gradient(145deg, #f6e6d6, #fffaf0 48%, #f0d6c4); }
-    .arch { width:min(670px, 100%); min-height:730px; position:relative; text-align:center; padding:76px 34px 54px; border:1px solid rgba(112,44,50,.35); border-radius:340px 340px 20px 20px; background:rgba(255,253,247,.62); box-shadow:0 22px 60px rgba(91,39,42,.13); }
-    .arch:before, .arch:after { content:"✦"; position:absolute; color:var(--marigold); font-size:28px; }
-    .arch:before { top:28px; left:52px; } .arch:after { top:28px; right:52px; }
-    .eyebrow { color:var(--leaf); font-size:.71rem; font-weight:600; letter-spacing:.28em; text-transform:uppercase; margin:0 0 30px; }
-    .invites { font-family:"Cormorant Garamond", serif; font-style:italic; font-size:1.45rem; margin:0 0 15px; }
-    h1 { font:normal 5.8rem/0.8 "Great Vibes", cursive; color:var(--wine); margin:0; text-shadow:0 2px 0 white; }
-    .amp { font:italic 2.2rem/1 "Cormorant Garamond", serif; display:block; margin:12px 0 8px; color:var(--marigold); }
-    .together { font:600 .73rem/1.65 Montserrat,sans-serif; letter-spacing:.2em; text-transform:uppercase; margin:25px auto 35px; max-width:330px; }
-    .divider { display:flex; align-items:center; gap:13px; justify-content:center; color:var(--marigold); margin:20px 0; }
-    .divider:before,.divider:after { content:""; height:1px; width:78px; background:linear-gradient(90deg, transparent,var(--marigold)); } .divider:after { transform:scaleX(-1); }
-    .date { font:600 1.25rem "Cormorant Garamond",serif; letter-spacing:.14em; text-transform:uppercase; margin:0; }
-    .date strong { display:block; font-size:3.1rem; letter-spacing:.02em; line-height:1.05; }
-    .date small { display:block; margin-top:8px; font:500 .68rem Montserrat,sans-serif; letter-spacing:.19em; }
-    .city { margin-top:35px; color:var(--leaf); font:600 .75rem Montserrat,sans-serif; letter-spacing:.25em; text-transform:uppercase; }
-    .lotus { font-size:2.2rem; color:var(--marigold); margin-top:18px; }
-    .ornament { position:absolute; font:normal 6rem/1 "Cormorant Garamond", serif; color:rgba(85,99,66,.18); } .o1{left:-22px;bottom:56px;transform:rotate(-30deg)} .o2{right:-19px;bottom:130px;transform:rotate(35deg)}
-    .details { background:var(--wine); color:var(--cream); padding:86px 24px 96px; text-align:center; }
-    .section-kicker { color:#e9bd68; font-size:.69rem; letter-spacing:.28em; text-transform:uppercase; font-weight:600; }
-    h2 { font:normal 3.3rem/1 "Cormorant Garamond",serif; margin:13px 0 48px; }
-    .events { display:grid; grid-template-columns:repeat(2,minmax(0,310px)); justify-content:center; gap:22px; }
-    .event { border:1px solid rgba(242,204,126,.55); min-height:255px; padding:36px 25px; display:flex; flex-direction:column; justify-content:center; background:rgba(255,255,255,.035); }
-    .event .symbol { color:#efbe61; font-size:1.8rem; } .event h3 { font:normal 2rem "Cormorant Garamond",serif; margin:13px 0 5px; } .event p { font-size:.78rem; letter-spacing:.09em; line-height:1.8; margin:0; }
-    .closing { padding:78px 22px; text-align:center; background:linear-gradient(#fff9ec,#f6e4d2); } .closing p { font:italic 1.5rem "Cormorant Garamond",serif; margin:0 auto 14px; } .closing h2 { color:var(--wine); margin:0; }
-    @media (max-width:540px) { .arch { min-height:660px; padding:72px 20px 38px; } h1 { font-size:4.5rem; } .events { grid-template-columns:1fr; max-width:330px; margin:auto; } }
+    /* --------------------------------------------------
+       THEME VARIABLES
+       -------------------------------------------------- */
+    :root {
+      --ocean-blue: #071F38;
+      --deep-teal: #0A2E46;
+      --soft-aqua: #7BB3BD;
+      --pale-seafoam: #EBF3F5;
+      --crisp-white: #FFFFFF;
+      --champagne-gold: #D4AF37;
+      --champagne-light: #F4E8C1;
+      
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* --------------------------------------------------
+       RESET & BASE STYLES
+       -------------------------------------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      font-family: var(--font-sans);
+      color: var(--crisp-white);
+      background-color: var(--ocean-blue);
+    }
+
+    body {
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Reduced Motion Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal-element {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+    }
+
+    /* --------------------------------------------------
+       SCENE STRUCTURE & BACKGROUND
+       -------------------------------------------------- */
+    .scene {
+      height: 100vh;
+      height: 100dvh;
+      width: 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1.25rem;
+      text-align: center;
+    }
+
+    /* Background layer */
+    .floral-bg-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url('background.jpg'), 
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, rgba(7,31,56,0.95) 100%);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.95;
+    }
+
+    .scene-content {
+      position: relative;
+      z-index: 3;
+      max-width: 540px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* --------------------------------------------------
+       SCENE 1 STYLES
+       -------------------------------------------------- */
+    .scene-1-sub {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 4.2vw, 2.1rem); /* ~60% size of the main heading */
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: var(--champagne-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .scene-1-main {
+      font-family: var(--font-serif);
+      font-size: clamp(2.3rem, 7vw, 3.5rem); /* Main reference size */
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--crisp-white);
+      line-height: 1.15;
+    }
+
+    /* --------------------------------------------------
+       SCENE 2 STYLES (FULL IMAGE FIT)
+       -------------------------------------------------- */
+    #slide-2 {
+      padding: 1.5rem 1rem 2.5rem 1rem;
+      justify-content: space-between;
+      background: radial-gradient(circle at 50% 40%, #0c385e 0%, var(--ocean-blue) 100%);
+    }
+
+    .full-image-wrapper {
+      flex: 1;
+      width: 100%;
+      max-width: min(85vw, 620px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      margin-top: 0.25rem;
+    }
+
+    .full-screen-img {
+      max-width: 100%;
+      max-height: 60vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+
+    .couple-names {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 6vw, 2.8rem);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.25rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .couple-quote {
+      font-size: 1rem;
+      color: var(--soft-aqua);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    /* --------------------------------------------------
+       SCENE 3 STYLES (DATE DISPLAY)
+       -------------------------------------------------- */
+    .date-day-label {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+      font-style: italic;
+      color: var(--champagne-light);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+
+    .date-number-large {
+      font-family: var(--font-serif);
+      font-size: clamp(4.2rem, 14vw, 6.5rem);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--crisp-white);
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .date-year-label {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 500;
+      color: var(--soft-aqua);
+      letter-spacing: 0.15em;
+      margin-top: 0.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .location-text {
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--champagne-gold);
+      font-weight: 500;
+      margin-top: 1.5rem;
+    }
+
+    /* --------------------------------------------------
+       SCENE 4 STYLES (EVENTS CARDS)
+       -------------------------------------------------- */
+    .events-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      width: 100%;
+      max-width: 520px;
+      margin-top: 1rem;
+    }
+
+    .event-card {
+      flex: 1;
+      background: var(--pale-seafoam);
+      border-radius: 16px;
+      padding: 1.5rem 1rem;
+      text-align: left;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .event-date-title {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--champagne-gold);
+      font-size: clamp(0.9rem, 2.8vw, 1.1rem);
+      margin-bottom: 0.35rem;
+    }
+
+    .event-name {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 4.5vw, 2rem);
+      font-weight: 700;
+      color: var(--ocean-blue);
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .event-desc {
+      font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+      color: #4A6375;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    @media (max-width: 480px) {
+      .events-container {
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+      .event-card {
+        padding: 1.2rem 1.25rem;
+      }
+    }
+
+    /* --------------------------------------------------
+       SCENE 5 STYLES (CLOSING)
+       -------------------------------------------------- */
+    .invitation-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      color: var(--crisp-white);
+      letter-spacing: 0.05em;
+      margin-bottom: 2.5rem;
+      line-height: 1.3;
+    }
+
+    .from-signature {
+      font-family: var(--font-sans);
+      font-size: clamp(1rem, 3.2vw, 1.25rem);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--champagne-light);
+      font-weight: 500;
+    }
+
+    /* --------------------------------------------------
+       COUNTDOWN GRID
+       -------------------------------------------------- */
+    .countdown-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .countdown-card {
+      background: rgba(235, 243, 245, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 8px;
+      padding: 0.6rem 0.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(4px);
+    }
+
+    .countdown-number {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      font-weight: 600;
+      color: var(--crisp-white);
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .countdown-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--soft-aqua);
+      font-weight: 500;
+    }
+
+    /* --------------------------------------------------
+       ANIMATIONS
+       -------------------------------------------------- */
+    .reveal-element {
+      opacity: 0;
+      transform: translateY(25px) scale(0.98);
+      filter: blur(4px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform, filter;
+    }
+
+    .scene.active .reveal-element {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0px);
+    }
+
+    .scene.active .delay-1 { transition-delay: 0.15s; }
+    .scene.active .delay-2 { transition-delay: 0.3s; }
+    .scene.active .delay-3 { transition-delay: 0.45s; }
+
+    /* --------------------------------------------------
+       SCROLL CUE INDICATOR
+       -------------------------------------------------- */
+    .scroll-cue {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      opacity: 0.75;
+    }
+
+    .scroll-cue-text {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--soft-aqua);
+    }
+
+    .scroll-cue svg {
+      width: 14px;
+      height: 14px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(5px); }
+      60% { transform: translateY(2px); }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <section class="hero">
-      <div class="arch">
-        <span class="ornament o1">❧</span><span class="ornament o2">❧</span>
-        <p class="eyebrow">With joyful hearts</p>
-        <p class="invites">Together with their families, invite you to celebrate</p>
-        <h1>Mayank T <span class="amp">&amp;</span> Ananya</h1>
-        <p class="together">as they begin their beautiful journey together</p>
-        <div class="divider">✦</div>
-        <p class="date">Saturday <strong>12 December</strong><small>Two thousand twenty-six · From evening onwards</small></p>
-        <p class="city">Mathura, Uttar Pradesh</p>
-        <div class="lotus">❋</div>
+
+  <!-- SCENE 1: INTRO -->
+  <section class="scene active" id="slide-1">
+    <div class="floral-bg-layer"></div>
+    <div class="scene-content">
+      <p class="scene-1-sub reveal-element">Finally......The Wait Is Over</p>
+      <h1 class="scene-1-main reveal-element delay-1">Save the Date</h1>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-cue-text">Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--soft-aqua)" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SCENE 2: IMAGE SCENE -->
+  <section class="scene" id="slide-2">
+    <div class="full-image-wrapper reveal-element">
+      <img 
+        src="couple-portrait.png" 
+        alt="Mayank and Ananya" 
+        class="full-screen-img"
+      />
+    </div>
+
+    <div class="scene-content">
+      <h2 class="couple-names reveal-element delay-1">Mayank and Ananya</h2>
+      <p class="couple-quote reveal-element delay-2">A New Beginning.</p>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-cue-text">Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--soft-aqua)" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SCENE 3: DATE & LOCATION -->
+  <section class="scene" id="slide-3">
+    <div class="floral-bg-layer"></div>
+    <div class="scene-content">
+      <p class="date-day-label reveal-element">Saturday</p>
+      <div class="date-number-large reveal-element delay-1">12.12</div>
+      <p class="date-year-label reveal-element delay-1">2026</p>
+      
+      <!-- Countdown -->
+      <div class="countdown-container reveal-element delay-2" id="countdown">
+        <div class="countdown-card"><span class="countdown-number" id="cd-days">00</span><span class="countdown-label">Days</span></div>
+        <div class="countdown-card"><span class="countdown-number" id="cd-hours">00</span><span class="countdown-label">Hours</span></div>
+        <div class="countdown-card"><span class="countdown-number" id="cd-minutes">00</span><span class="countdown-label">Mins</span></div>
+        <div class="countdown-card"><span class="countdown-number" id="cd-seconds">00</span><span class="countdown-label">Secs</span></div>
       </div>
-    </section>
-    <section class="details">
-      <p class="section-kicker">Save the dates</p>
-      <h2>Celebrations</h2>
-      <div class="events">
-        <article class="event"><div class="symbol">☀</div><h3>Haldi</h3><p>Friday · 11 December 2026<br>Evening</p></article>
-        <article class="event"><div class="symbol">✦</div><h3>Wedding</h3><p>Saturday · 12 December 2026<br>From evening onwards · Mathura</p></article>
+
+      <p class="location-text reveal-element delay-3">Mathura</p>
+    </div>
+    
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-cue-text">Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--soft-aqua)" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SCENE 4: HALDI & WEDDING CARDS -->
+  <section class="scene" id="slide-4">
+    <div class="floral-bg-layer"></div>
+    <div class="scene-content">
+      
+      <div class="events-container">
+        <!-- Haldi Card -->
+        <div class="event-card reveal-element">
+          <p class="event-date-title">Friday, 11 December</p>
+          <h3 class="event-name">Haldi</h3>
+          <p class="event-desc">An evening of colour before the big day.</p>
+        </div>
+
+        <!-- Wedding Card -->
+        <div class="event-card reveal-element delay-1">
+          <p class="event-date-title">Saturday, 12 December</p>
+          <h3 class="event-name">Wedding</h3>
+          <p class="event-desc">Our vows, right here in Mathura.</p>
+        </div>
       </div>
-    </section>
-    <section class="closing"><p>Your presence will make our celebration complete.</p><h2>Mayank &amp; Ananya</h2></section>
-  </main>
+
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-cue-text">Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--soft-aqua)" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SCENE 5: FORMAL INVITATION & SIGNATURE -->
+  <section class="scene" id="slide-5">
+    <div class="floral-bg-layer"></div>
+    <div class="scene-content">
+      <h2 class="invitation-text reveal-element">Formal Invitation<br>to Follow</h2>
+      <p class="from-signature reveal-element delay-1">From - Mayank T</p>
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT FOR SCROLL INTERSECTION & COUNTDOWN -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Scroll animations using Intersection Observer
+      const scenes = document.querySelectorAll('.scene');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.4 });
+
+      scenes.forEach(scene => observer.observe(scene));
+
+      // 2. Countdown timer targeting 12 December 2026
+      const targetDate = new Date('2026-12-12T18:00:00+05:30').getTime();
+
+      function updateCountdown() {
+        const diff = targetDate - new Date().getTime();
+        if (diff <= 0) return;
+
+        document.getElementById('cd-days').textContent = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+        document.getElementById('cd-hours').textContent = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        document.getElementById('cd-minutes').textContent = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        document.getElementById('cd-seconds').textContent = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  </script>
 </body>
 </html>
